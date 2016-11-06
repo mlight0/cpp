@@ -32,10 +32,10 @@ $sql = "SELECT user_id, user_first_name, user_last_name FROM tbl_users";
 $result = $conn->query($sql);
 ?>
 
-<table>
+<table border=1>
     <tr>
-        <td>User ID</td>
-        <td>Name</td>
+        <td><b>User ID<b></td>
+        <td><b>Name<b></td>
     </tr>
 
 
