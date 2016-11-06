@@ -19,11 +19,16 @@ class ComposerStaticInit21fee4c89af220ae046ac58e1dc9055e
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Debug\\' => 24,
+            'Symfony\\Bridge\\Twig\\' => 20,
             'Silex\\' => 6,
         ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
         ),
     );
 
@@ -52,6 +57,10 @@ class ComposerStaticInit21fee4c89af220ae046ac58e1dc9055e
         array (
             0 => __DIR__ . '/..' . '/symfony/debug',
         ),
+        'Symfony\\Bridge\\Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/twig-bridge',
+        ),
         'Silex\\' => 
         array (
             0 => __DIR__ . '/..' . '/silex/silex/src/Silex',
@@ -60,9 +69,20 @@ class ComposerStaticInit21fee4c89af220ae046ac58e1dc9055e
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
     );
 
     public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 

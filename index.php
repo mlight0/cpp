@@ -1,5 +1,6 @@
 <?php
-print "Hello ";
+
+echo "Hello ";
 ?>
 World! <br/><br/> 
 
@@ -14,31 +15,48 @@ Welcome to Career Path Plus!
 <?php
 
 $dbopts = parse_url(getenv('DATABASE_URL'));
+
+use Herrera\Pdo\PdoServiceProvider;
+//use Silex\Application;
+
+//$app = new Application();
+$app->register(
+    new PdoServiceProvider(),
+    array(
+        'pdo.dsn' => "'pdo_mysql:dbname=" . ltrim($dbopts["path"],"/") . ";host=" . $dbopts["host"] . ";port=" . $dbopts["port"] . "'",
+        'pdo.username' => $dbopts["user"], // optional
+        'pdo.password' => $dbopts["pass"] // optional
+        )
+    );
+/*
 $app->register(new Herrera\Pdo\PdoServiceProvider(),
                array(
-                   'pdo.dsn' => 'pgsql:dbname='.ltrim($dbopts["path"],'/').';host='.$dbopts["host"] . ';port=' . $dbopts["port"],
-                   'pdo.username' => $dbopts["user"],
-                   'pdo.password' => $dbopts["pass"]
+                   "pdo.dsn" => "mysql:dbname=" . ltrim($dbopts["path"],"/") . ";host=" . $dbopts["host"] . ";port=" . $dbopts["port"],
+                   "pdo.username" => $dbopts["user"],
+                   "pdo.password" => $dbopts["pass"]
                )
-);
-
+);*/
+/*
 $app->get('/db/', function() use($app) {
-  $st = $app['pdo']->prepare('SELECT user_first_name FROM tbl_users');
+  $st = $app['pdo']->prepare('SELECT name FROM test_table');
   $st->execute();
 
-  $names = array();
+  //$names = array();
   while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
-    $app['monolog']->addDebug('Row ' . $row['user_first_name']);
-    $names[] = $row;
+    //$app['monolog']->addDebug('Row ' . $row['name']);
+    //$names[] = $row;
+            echo $row['user_first_name'] . "<br>";
   }
 
-  return $app['twig']->render('database.twig', array(
-    'user_first_name' => $names
+  /*return $app['twig']->render('database.twig', array(
+    'names' => $names
   ));
-});
+});*/
 ?>
 
 <?php
+
+/*
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = $url["host"];
@@ -69,5 +87,5 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
-
+*/
 ?>
