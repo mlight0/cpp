@@ -16,7 +16,7 @@ $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
 
-echo "test 1<br/>";
+echo "test 1<br><br>";
 
 $conn = new mysqli($server, $username, $password, $db);
 
@@ -24,11 +24,11 @@ $conn = new mysqli($server, $username, $password, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+echo "test 2<br><br>";
 
-
-$sql = "SELECT user_id, user_firs_tname, user_las_tname FROM tbl_users";
+$sql = "SELECT user_id, user_first_name, user_last_name FROM tbl_users";
 $result = $conn->query($sql);
-
+echo "test 3<br><br>";
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
