@@ -3,7 +3,7 @@ print "Hello ";
 ?>
 World! <br/><br/> 
 
-<?php echo now(); ?> <br/><br/>
+<?php echo date("h:i:sa"); ?> <br/><br/>
 
 Welcome to Career Path Plus!
 
