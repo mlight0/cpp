@@ -8,6 +8,34 @@ Welcome to Career Path Plus!
 
 <br/><br/>
 
+
+<?php
+
+$dbopts = parse_url(getenv('DATABASE_URL'));
+$app->register(new Herrera\Pdo\PdoServiceProvider(),
+               array(
+                   'pdo.dsn' => 'pgsql:dbname='.ltrim($dbopts["path"],'/').';host='.$dbopts["host"] . ';port=' . $dbopts["port"],
+                   'pdo.username' => $dbopts["user"],
+                   'pdo.password' => $dbopts["pass"]
+               )
+);
+
+$app->get('/db/', function() use($app) {
+  $st = $app['pdo']->prepare('SELECT user_first_name FROM tbl_users');
+  $st->execute();
+
+  $names = array();
+  while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
+    $app['monolog']->addDebug('Row ' . $row['user_first_name']);
+    $names[] = $row;
+  }
+
+  return $app['twig']->render('database.twig', array(
+    'user_first_name' => $names
+  ));
+});
+?>
+
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
