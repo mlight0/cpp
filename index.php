@@ -16,7 +16,7 @@ $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
 
-echo "test 1";
+echo "test 1<br/>";
 
 $conn = new mysqli($server, $username, $password, $db);
 
