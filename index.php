@@ -20,27 +20,46 @@ $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
 
-echo $server;
-
 $conn = new mysqli($server, $username, $password, $db);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "test 2<br><br>";
+
 
 $sql = "SELECT user_id, user_first_name, user_last_name FROM tbl_users";
 $result = $conn->query($sql);
-echo "test 3<br><br>";
+?>
+
+<table>
+    <tr>
+        <td>User ID</td>
+        <td>Name</td>
+    </tr>
+
+
+
+
+
+<?php
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "user_id: " . $row["user_id"]. " - Name: " . $row["user_first_name"]. " " . $row["user_last_name"]. "<br>";
+    while($row = $result->fetch_assoc()) {?>
+
+    <tr>
+        <td><?php echo $row["user_id"]; ?></td>
+        <td><?php echo $row["user_first_name"]  . " " .  $row["user_last_name"]; ?></td>
+    </tr>
+<?php 
+      //  echo "user_id: " . . " - Name: " . $row["user_first_name"]. " " . $row["user_last_name"]. "<br>";
+
     }
 } else {
     echo "0 results";
 }
+?>
+</table>
+<?php 
 $conn->close();
-
 ?>
