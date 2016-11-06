@@ -1,7 +1,9 @@
 <?php
 print "Hello ";
 ?>
-World! <br/> 
+World! <br/><br/> 
+
+<?php echo now(); ?> <br/><br/>
 
 Welcome to Career Path Plus!
 
