@@ -41,7 +41,7 @@ h4 {
 }
 
 .bg-blue {
-    background-color: #1a53ff;
+    background-color: #0099ff;
 }
 .font-blue {
     color: #0099ff;
@@ -139,10 +139,16 @@ h4 {
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
 }
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
 .navbar .btn {
     color: #fff !important;
     background-color: #f4511e;
     margin: 5px 5px;
+    
     border: 1px solid #f4511e;
 }
 
@@ -160,16 +166,29 @@ h4 {
     padding: 6px 12px;
     letter-spacing: 0px;
 }
-.navbar .btn-wht:hover {
+
+.navbar .link-btn-wht:hover {
     color: #666 !important;
     background-color: #f0f0f0;
     margin: 5px 5px;
     border: 1px solid #f4511e;
 }
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
+
+.navbar .link-btn {
+    color: #fff !important;
+    background-color: #f4511e;
+    margin: 5px 5px;
+    border: 1px solid #f4511e;
+    padding: 6px 12px;
+    letter-spacing: 0px;
 }
+
+.navbar .link-btn:hover {
+    color: #666 !important;
+    background-color: #f0f0f0;
+    border: 1px solid #f4511e;
+}
+
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
