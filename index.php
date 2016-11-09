@@ -34,40 +34,94 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#about">ABOUT</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">FEATURES<span class="caret"></span></a>
+                            
+                            <ul class="dropdown-menu">
+                                <li><a href="#about">ABOUT</a></li>
+                                <li><a href="#careerpath">CAREER PATH</a></li>
+                                <li><a href="#contact">CONTACT</a></li> 
+                              </ul>
+                            </li>
+                            
                         <li><a href="#careerpath">CAREER PATH</a></li>
                         <li><a href="#pricing">PRICING</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <!--<li><a href="#contact">CONTACT</a></li>
                         <li><a href="#signup" class="btn link-btn" role="button">Sign Up</a></li>
-                        <li><a href="careerpath.php" class="btn link-btn-wht" role="button">Login</a></li>
+                        <li><a href="careerpath.php" class="btn link-btn-wht" role="button">Login</a></li>-->
+                   
+                        <li>
+                            <form class="form-inline" action="careerpath.php">
+                                <div class="form-group">
+                                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                </div>
+                                <button type="submit" class="btn btn-default">Login</button>
+                            </form>
+                        </li> 
                     </ul>
                 </div>
             </div>
         </nav>
-       
-        <div  class="container-fluid">
+ 
+
+        <div  class="container-fluid homebgimage">
             <div class="row ">
+            <br>
+                <div class="col-sm-2"></div>
 
-                <div class="col-sm-5">
-                    <a href="#demo3" data-toggle="collapse">
-                        <img src="images/subway-map-600x420_bl.png" class="img-responsive" alt="Employment Journey" width="600" height="420">
-                    </a>
-                </div>
-
-                <div class="col-sm-7">
+                <div class="col-sm-4">
                     <h2 class='font-orange'>The journey to your next job starts now.</h2>
-                    <h4>
+                   
+                    <h4 style="color:#fff;">
                         In today's job market there is no time to waste. With the flood of competing candidates and the rise online job boards and recruiting web sites are all very promising, 
                         but you have to ask yourself, <i>"Why haven't I landed my next job yet?"</i>
                     </h4>
-                    <p>
+                        
+                    <p style="color:#fff;">
                         Whether you are a new grad or a seasoned professional, if you're in the job market you're likely overlooking one of the most critical aspects of turning an opportunity into a job offer.
                         It's the journey. Career Path Plus is designed to walk you though a proven methodology to take you from applicant to employed. 
                     </p>
-                    <br><a href="#signup" class="btn btn-default btn-lg" role="button">Get Started</a>
                     
                 </div>
-            </div> 
+                
+                <div class="col-sm-4">
+                    <div class="well well-lg">
+                        
+                        <h2 class="font-orange">Start Your Journey now</h2>
+                        
+                        <form action="careerpath.php"> 
+                            <div class="form-group">
+                              <label for="firstname">First Name:</label>
+                              <input type="firstname" class="form-control" id="firstname">
+                            </div>
+                            <div class="form-group">
+                              <label for="lastname">Last Name:</label>
+                              <input type="lastname" class="form-control" id="lastname">
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email address:</label>
+                              <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Password:</label>
+                              <input type="password" class="form-control" id="pwd">
+                            </div>
+                            <div class="text-center">
+                            By clicking Join now, you agree to the Career Path Plus User Agreement, Privacy Policy, and Cookie Policy.
+                            <br><br>
+                            <button type="submit" class="btn btn-default btn-lg font-orange" >Sign me up!</button>
+                            </div>
+                        </form>
+                        
+                   </div>
+                </div>
+                
+                <div class="col-sm-2"></div>
+                
+            </div>
         </div>
 
         <!-- Container (About Section) -->
@@ -85,41 +139,7 @@
             </div>
         </div>
 
-        <div id="signup" class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                   <div class="well well-lg">
-                    <h2 class="font-orange">Start Your Journey now</h2>
-                    <form action="careerpath.php"> 
-                        <div class="form-group">
-                          <label for="firstname">First Name:</label>
-                          <input type="firstname" class="form-control" id="firstname">
-                        </div>
-                        <div class="form-group">
-                          <label for="lastname">Last Name:</label>
-                          <input type="lastname" class="form-control" id="lastname">
-                        </div>
-                        <div class="form-group">
-                          <label for="email">Email address:</label>
-                          <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                          <label for="pwd">Password:</label>
-                          <input type="password" class="form-control" id="pwd">
-                        </div>
-                        <div class="text-center">
-                        By clicking Join now, you agree to the Career Path Plus User Agreement, Privacy Policy, and Cookie Policy.
-                        <br><br>
-                        <button type="submit" class="btn btn-default btn-lg font-orange" >Sign me up!</button>
-                        </div>
-                    </form>
-                   </div>
-                </div>
-            
-                <div class="col-sm-3"></div>
-        </div>
-</div>
+        
         <!-- Container (Career Path Section) -->
         <div id="careerpath" class="container-fluid bg-grey text-center">
             <h2>Career Path</h2>
@@ -261,34 +281,7 @@
                 </div>
             </div>
         </div>
-
-        <div id="googleMap" style="height:400px;width:100%;"></div>
-
-        <!-- Add Google Maps -->
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script>
-            var myCenter = new google.maps.LatLng(41.878114, -87.629798);
-
-            function initialize() {
-                var mapProp = {
-                    center: myCenter,
-                    zoom: 12,
-                    scrollwheel: false,
-                    draggable: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-                var marker = new google.maps.Marker({
-                    position: myCenter,
-                });
-
-                marker.setMap(map);
-            }
-
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
+        
 
         <footer class="container-fluid text-center">
             <a href="#myPage" title="To Top">
