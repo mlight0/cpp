@@ -35,40 +35,41 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">FEATURES<span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">THE JOURNEY<span class="caret"></span></a>
                             
                             <ul class="dropdown-menu">
                                 <li><a href="#about">ABOUT</a></li>
                                 <li><a href="#careerpath">CAREER PATH</a></li>
+                                <li><a href="#pricing">PRICING</a></li>
                                 <li><a href="#contact">CONTACT</a></li> 
                               </ul>
                             </li>
-                            
-                        <li><a href="#careerpath">CAREER PATH</a></li>
-                        <li><a href="#pricing">PRICING</a></li>
-                        <!--<li><a href="#contact">CONTACT</a></li>
-                        <li><a href="#signup" class="btn link-btn" role="button">Sign Up</a></li>
-                        <li><a href="careerpath.php" class="btn link-btn-wht" role="button">Login</a></li>-->
-                   
-                        <li>
-                            <form class="form-inline" action="careerpath.php">
-                                <div class="form-group">
-                                  <input type="email" class="form-control" id="email" placeholder="Enter email">
-                                </div>
-                                <div class="form-group">
-                                  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                                </div>
-                                <button type="submit" class="btn btn-default">Login</button>
-                            </form>
-                        </li> 
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <!--<li><a href="#careerpath">CAREER PATH</a></li>
+                            <li><a href="#pricing">PRICING</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a href="#signup" class="btn link-btn" role="button">Sign Up</a></li>
+                            <li><a href="careerpath.php" class="btn link-btn-wht" role="button">Login</a></li>-->
+
+                            <li>
+                                <form class="form-inline" action="careerpath.php">
+                                    <div class="form-group">
+                                      <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Login</button>
+                                </form>
+                            </li> 
                     </ul>
                 </div>
             </div>
         </nav>
  
 
-        <div  class="container-fluid homebgimage">
-            <div class="row ">
+        <div id='signup' class="container-fluid homebgimage">
+            <div class="row">
             <br>
                 <div class="col-sm-2"></div>
 
@@ -84,6 +85,8 @@
                         Whether you are a new grad or a seasoned professional, if you're in the job market you're likely overlooking one of the most critical aspects of turning an opportunity into a job offer.
                         It's the journey. Career Path Plus is designed to walk you though a proven methodology to take you from applicant to employed. 
                     </p>
+                    
+                    <a href="#about" class="btn btn-lg btn-org" role="button">Learn more</a>
                     
                 </div>
                 
@@ -112,7 +115,7 @@
                             <div class="text-center">
                             By clicking Join now, you agree to the Career Path Plus User Agreement, Privacy Policy, and Cookie Policy.
                             <br><br>
-                            <button type="submit" class="btn btn-default btn-lg font-orange" >Sign me up!</button>
+                            <button type="submit" class="btn btn-default btn-lg btn-org" >Sign me up!</button>
                             </div>
                         </form>
                         
@@ -141,43 +144,43 @@
 
         
         <!-- Container (Career Path Section) -->
-        <div id="careerpath" class="container-fluid bg-grey text-center">
+        <div id="careerpath" class="container-fluid text-center">
             <h2>Career Path</h2>
             <h4>What we offer</h4>
             <br>
             <div class="row slideanim">
                 <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-off logo-small"></span>
-                    <h4>POWER</h4>
-                    <p>Lorem ipsum dolor sit amet..</p>
+                    <span class="glyphicon glyphicon-th-list logo-small"></span>
+                    <h4>Opportunity Pipeline</h4>
+                    <p>Track your job opportunities from application to employment. Store critical information so you can easily refer back if you get <i><strong>"The call"</strong></i>.</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-heart logo-small"></span>
-                    <h4>LOVE</h4>
-                    <p>Lorem ipsum dolor sit amet..</p>
+                    <span class="glyphicon glyphicon-file logo-small"></span>
+                    <h4>Resume Online</h4>
+                    <p>When was the last time you tuned up your resume? Keep your resume up-to-date and accessible in the cloud so you get get it and send it when you need it the most.</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-lock logo-small"></span>
-                    <h4>JOB DONE</h4>
-                    <p>Lorem ipsum dolor sit amet..</p>
+                    <span class="glyphicon glyphicon-envelope logo-small"></span>
+                    <h4>Cover Letter Online</h4>
+                    <p>Use our cover letter template and keep a copy for each job opportunity. Yes, having a cover letter will give you the edge you need to look professional and stay top of mind for your next prospective employer.</p>
                 </div>
             </div>
             <br><br>
             <div class="row slideanim">
                 <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-leaf logo-small"></span>
-                    <h4>GREEN</h4>
-                    <p>Lorem ipsum dolor sit amet..</p>
+                    <span class="glyphicon glyphicon-send logo-small"></span>
+                    <h4>Follow Up Letter?</h4>
+                    <p>Yes, if you're not using one you're losing out. We've got you covered with templates and insight on how and why to use a follow up letter.</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-certificate logo-small"></span>
-                    <h4>CERTIFIED</h4>
-                    <p>Lorem ipsum dolor sit amet..</p>
+                    <span class="glyphicon glyphicon-refresh logo-small"></span>
+                    <h4>Proven Process</h4>
+                    <p>One definition of insanity is doing the same thing and expecting a different result. If what you're doing isn't working it's time to use a proven process to see the results you're looking for.</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-wrench logo-small"></span>
-                    <h4 style="color:#303030;">HARD WORK</h4>
-                    <p>Lorem ipsum dolor sit amet..</p>
+                    <span class="glyphicon glyphicon-ok-circle logo-small"></span>
+                    <h4 style="color:#303030;">Get Started</h4>
+                    <p>There is one thing keeping you from taking your first step to getting your next job. You have to <a href='#signup'>Sign Up!</a></p>
                 </div>
             </div>
         </div>
@@ -186,7 +189,7 @@
 
 
         <!-- Container (Pricing Section) -->
-        <div id="pricing" class="container-fluid">
+        <div id="pricing" class="container-fluid bg-grey">
             <div class="text-center">
                 <h2>Pricing</h2>
                 <h4>Get started with your <strong>30 day free trial</strong> <br/>
@@ -254,40 +257,58 @@
         </div>
 
         <!-- Container (Contact Section) -->
-        <div id="contact" class="container-fluid bg-grey">
-            <h2 class="text-center">CONTACT</h2>
+        <div id="contact" class="container-fluid" style="background: #32363f; color: #fff;">
             <div class="row">
-                <div class="col-sm-5">
-                    <p>Contact us and we'll get back to you within 24 hours.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-                    <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-                    <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+                <div class="col-sm-4">
+                    <h4 style="color: #d4d5d7;">About</h4>
+                    <ul>
+                        <li><a href="#about" style="color:#fff;">About</a></li>
+                        <li><a href="#pricing" style="color:#fff;">Pricing</a></li>
+                        <li><a href="#careerpath" style="color:#fff;">Career Path</a></li>
+                        <li><a href="#careerpath" style="color:#fff;">Terms of Service</a></li>
+                        <li><a href="#careerpath" style="color:#fff;">Privacy Policy</a></li>
+                    </ul>
                 </div>
-                <div class="col-sm-7 slideanim">
+              
+                <div class="col-sm-4">
+                    <h4 style="color: #d4d5d7;">Contact</h4>
+                    
                     <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                        </div>
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                      </div>
                     </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                    <br>
                     <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit">Send</button>
-                        </div>
+                      <div class="col-md-12 form-group">
+                        <button class="btn pull-right btn-org" type="submit">Send</button>
+                      </div>
                     </div>
+   
+                </div>
+                <div class="col-sm-4">
+                    <h4 style="color: #d4d5d7;">Connect</h4>
+                    
+                        <a href="http://www.linkedin.com" target="_blank"><img src="images/FooterIcons_LinkedIn.jpg" class="img-responsive"></a>
+                        <a href="http://www.twitter.com" target="_blank"><img src="images/FooterIcons_Twitter.jpg" class="img-responsive"></a>
+                        <a href="http://www.youtube.com" target="_blank"><img src="images/FooterIcons_Youtube.jpg" class="img-responsive"></a>
+                   
                 </div>
             </div>
         </div>
-        
 
-        <footer class="container-fluid text-center">
-            <a href="#myPage" title="To Top">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-            <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+        <footer class="container-fluid text-center" style="background: #222; color: #fff;">
+            <div class="row">
+                <div class="col-sm-4">
+                    <small style="color:#999999;">© Career Path Plus. All rights reserved.</small>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
         </footer>
 
         <script>
