@@ -38,6 +38,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">THE JOURNEY<span class="caret"></span></a>
                             
                             <ul class="dropdown-menu">
+                                <li><a href="#signup">GET STARTED</a></li>
                                 <li><a href="#about">ABOUT</a></li>
                                 <li><a href="#careerpath">CAREER PATH</a></li>
                                 <li><a href="#pricing">PRICING</a></li>
