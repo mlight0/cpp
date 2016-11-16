@@ -1,4 +1,4 @@
-﻿-- Table: public.tbl_users
+-- Table: public.tbl_users
 
 -- DROP TABLE public.tbl_users;
 

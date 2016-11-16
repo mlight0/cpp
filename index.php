@@ -53,12 +53,12 @@
                             <li><a href="careerpath.php" class="btn link-btn-wht" role="button">Login</a></li>-->
 
                             <li>
-                                <form class="form-inline" action="account/user_authentication.php">
+                                <form class="form-inline" action="account/user_authentication.php" method="post">
                                     <div class="form-group">
-                                      <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                      <input type="email" class="form-control" name="email" placeholder="Enter email">
                                     </div>
                                     <div class="form-group">
-                                      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                      <input type="password" class="form-control" name="password" placeholder="Enter password">
                                     </div>
                                     <button type="submit" class="btn btn-default">Login</button>
                                 </form>

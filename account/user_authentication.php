@@ -1,35 +1,62 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+include '../includes/configuration.php';
 
 
 
-?>
 
-<?php
-# This function reads your DATABASE_URL config var and returns a connection
-# string suitable for pg_connect. Put this in your app.
-function pg_connection_string_from_database_url() {
-  extract(parse_url($_ENV["DATABASE_URL"]));
-  return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
-}
-# Here we establish the connection. Yes, that's all.
+## Authenticate User
+
+# Establish the connection. 
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 
-# Now let's use the connection for something silly just to prove it works:
-$result = pg_query($pg_conn, "SELECT relname FROM pg_stat_user_tables WHERE schemaname='public'");
+$useremail = filter_input(INPUT_POST, "email");
+$userpassword = filter_input(INPUT_POST, "password");
+       
+$result = pg_query($pg_conn, "SELECT sp_user_authenticate('$useremail', '$userpassword');");
 
-print "<pre>\n";
+$val = pg_fetch_result($result, 0, 0);
 
-if (!pg_num_rows($result)) {
-  print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
-} else {
-  print "Tables in your database:\n";
-  while ($row = pg_fetch_row($result)) { print("- $row[0]\n"); }
+/*
+while ($row = pg_fetch_assoc($result))
+{
+    
+    
+    echo $row[""];
+    
+        /*while($row)
+        {
+           if($row[0] == 0)
+           {
+               echo "You're not welcome here.\n";
+           }
+           else
+           {
+               echo "Welcome!\n";
+           }
+            
+        }
+}*/
+/*else
+{
+    echo "No results.";
 }
-print "\n";
+*/
+
+if ($val == 0) {
+    
+    print("You are not authorized. \n");
+  
+} else {
+  
+  while ($row = pg_fetch_row($result)) { 
+      
+      print("Welcome! \n");
+            
+  }
+}
+# Get the variables from the form.
+
+echo "<br><br> Email: " . $useremail . "<br>";
+echo "Password: " . $userpassword . "<br>";
+
 ?>
