@@ -2,61 +2,42 @@
 include '../includes/configuration.php';
 
 
+// Connect to database
+$conn = database_connection();
 
-
-## Authenticate User
-
-# Establish the connection. 
-$pg_conn = pg_connect(pg_connection_string_from_database_url());
-
-$useremail = filter_input(INPUT_POST, "email");
-$userpassword = filter_input(INPUT_POST, "password");
-       
-$result = pg_query($pg_conn, "SELECT sp_user_authenticate('$useremail', '$userpassword');");
-
-$val = pg_fetch_result($result, 0, 0);
-
-/*
-while ($row = pg_fetch_assoc($result))
-{
-    
-    
-    echo $row[""];
-    
-        /*while($row)
-        {
-           if($row[0] == 0)
-           {
-               echo "You're not welcome here.\n";
-           }
-           else
-           {
-               echo "Welcome!\n";
-           }
-            
-        }
-}*/
-/*else
-{
-    echo "No results.";
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+// Authenticate User: Pass email address and password
+try{
+    // Execute stored procedure
+    $result = mysqli_query($conn, "CALL sp_AuthenticateUser('" . $_POST["email"] . "','" . $_POST["password"] . "');") or die("Query fail: " . mysqli_error());
 }
-*/
+catch (exception $e) {
+    echo $e;
+}
+// Close DB connection
+$conn->close();
 
-if ($val == 0) {
+// Verify authentication
+if($result->num_rows > 0){
+    while ($row = $result->fetch_assoc()) {
+        $UserAuthenticated =  $row["Authenticated"];
+    }
+}
+
+// Redirect based on authentication
+if ($UserAuthenticated > "0") {
     
-    print("You are not authorized. \n");
-  
+    // Set user cookie with successful authentication
+    $temp_userid = "1";
+    setcookie("userid", $temp_userid, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+    redirect("../careerpath.php");
+    
 } else {
-  
-  while ($row = pg_fetch_row($result)) { 
-      
-      print("Welcome! \n");
-            
-  }
+    redirect("../index.php?error=login_failed");
 }
-# Get the variables from the form.
-
-echo "<br><br> Email: " . $useremail . "<br>";
-echo "Password: " . $userpassword . "<br>";
 
 ?>

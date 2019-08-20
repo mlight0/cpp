@@ -12,6 +12,7 @@ body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
+    
 }
 h2 {
     font-size: 24px;
@@ -36,6 +37,7 @@ h4 {
 .container-fluid {
     padding: 60px 50px;
 }
+
 .homebgimage {
     background: #f4511e url("../images/cpp-main2-1220x1000.jpg") no-repeat;
     background-size: 100%;
@@ -94,7 +96,7 @@ h4 {
 }
 .panel {
     border: 1px solid #f4511e;
-    border-radius:0 !important;
+    border-radius:0;
     transition: box-shadow 0.5s;
 }
 .panel:hover {
@@ -102,12 +104,13 @@ h4 {
 }
 .panel-footer .btn:hover {
     border: 1px solid #f4511e;
-    background-color: #fff !important;
+    background-color: #fff;
     color: #f4511e;
 }
+
 .panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
+    color: #fff;
+    background-color: #f4511e;
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -116,7 +119,7 @@ h4 {
     border-bottom-right-radius: 0px;
 }
 .panel-footer {
-    background-color: white !important;
+    background-color: white;
 }
 .panel-footer h3 {
     font-size: 32px;
@@ -130,27 +133,31 @@ h4 {
     background-color: #f4511e;
     color: #fff;
 }
+
+/*  NAVBAR STYLES  */
 .navbar {
     margin-bottom: 0;
-    background-color: #0099ff;
+    background-color: #f4511e;
     z-index: 9999;
     border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
+    font-size: 12px;
+    line-height: 1.42857143;
     letter-spacing: 4px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
 }
+
 .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: #f4511e;
+    background-color: #ff9933;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
+    color: #f4511e;
+    background-color: #fff;
 }
 .navbar .btn {
-    color: #fff !important;
+    color: #fff;
     background-color: #f4511e;
     margin: 5px 5px;
     
@@ -158,13 +165,13 @@ h4 {
 }
 
 .navbar .btn:hover {
-    color: #f4511e !important;
+    color: #f4511e ;
     background-color: #fff;
     border-color: f4511e;
 }
 
 .navbar .link-btn-wht {
-    color: #f4511e !important;
+    color: #f4511e ;
     background-color: #fff;
     margin: 5px 5px;
     border: 1px solid #f4511e;
@@ -173,14 +180,14 @@ h4 {
 }
 
 .navbar .link-btn-wht:hover {
-    color: #666 !important;
+    color: #666;
     background-color: #f0f0f0;
     margin: 5px 5px;
     border: 1px solid #f4511e;
 }
 
 .navbar .link-btn {
-    color: #fff !important;
+    color: #fff;
     background-color: #f4511e;
     margin: 5px 5px;
     border: 1px solid #f4511e;
@@ -189,7 +196,7 @@ h4 {
 }
 
 .btn-org {
-    color: #fff !important;
+    color: #fff;
     background-color: #f4511e;
     margin: 0px 0px;
     border: 1px solid #f4511e;
@@ -197,7 +204,7 @@ h4 {
     letter-spacing: 0px;
 }
 .btn-org:hover {
-    color: #f4511e !important;
+    color: #f4511e;
     background-color: #fff;
     margin: 0px 0px;
     border: 1px solid #f4511e;
@@ -205,29 +212,30 @@ h4 {
     letter-spacing: 0px;
 }
 .navbar .link-btn:hover {
-    color: #666 !important;
+    color: #666;
     background-color: #f0f0f0;
     border: 1px solid #f4511e;
 }
 
 .navbar-default .navbar-toggle {
     border-color: transparent;
-    color: #fff !important;
+    color: #fff;
 }
 
  /*-- change navbar dropdown color --*/
   .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #0099ff;
-    color:#ffffff;
+    background-color: red;
+    color:#0099ff;
   }
 
-
-footer .glyphicon {
+/*-- Footer Styles begin here --*/
+.footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
     color: #f4511e;
 }
 .slideanim {visibility:hidden;}
+
 .slide {
     animation-name: slide;
     -webkit-animation-name: slide;

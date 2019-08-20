@@ -1,22 +1,49 @@
 <?php
 
-// Database connection string based on local or Heroku enviroment.
-function pg_connection_string_from_database_url() {
-    
-    if (isset($_ENV['DATABASE_URL'])){ // check to see if the DATABASE_URL environmental variable i set.
+// Get the correct database connection string by environment
+function database_connection(){
 
-      //Extract and generation the server DB connection string.
-      extract(parse_url($_ENV['DATABASE_URL']));
-      return "host=$host  dbname=" . substr($path, 1) ." user=$user password=$pass .";
+  if (isset($_ENV['CLEARDB_DATABASE_URL'])){
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-    } else {
+    $server = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $db = substr($url["path"], 1);
 
-       // Return the local DB connection string.  
-       return "host=localhost port=5432 dbname=careerpathplus user=postgres password=postgres";        
-       
-    }
+    return new mysqli($server, $username, $password, $db);
+
+  } else {
+
+    $server = "127.0.0.1";
+    $username = "root";
+    $password = "GodAlmighty1";
+    $db = "careerpathplus";
+
+    return new mysqli($server, $username, $password, $db);
+
+  }
 }
 
+// Helper function for easy redirects
+function redirect($url, $statusCode = 303)
+{
+   header('Location: ' . $url, true, $statusCode);
+   die();
+}
 
+function isUserAuthenticated(){
+
+  // If no cookie exists then go top logout page
+  if(!isset($_COOKIE['userid'])) {
+    
+    if($x['filename'] <> "index")
+    {
+      redirect("logout.php");
+    }
+  } else {
+    // Don't do anything...
+  }
+}
 
 ?>
