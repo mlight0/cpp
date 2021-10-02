@@ -10,7 +10,7 @@ include 'includes/header_main.php';
                 <div class="col-sm-2"></div>
 
                 <div class="col-sm-4">
-                    <h2 class="font-orange">The journey to your next job starts now.</h2>
+                    <h2>The journey to your next job starts now.</h2>
                    
                     <h4 style="color:#fff;">
                         In today's job market there is no time to waste. With the flood of competing candidates and the rise online job boards and recruiting web sites are all very promising, 
@@ -29,7 +29,7 @@ include 'includes/header_main.php';
                 <div class="col-sm-4">
                     <div class="well well-lg">
                         
-                        <h2 class="font-orange">Start Your Journey now</h2>
+                        <h2>Start Your Journey now</h2>
                         
                         <form action="careerpath.php"> 
                             <div class="form-group">

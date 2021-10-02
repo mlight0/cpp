@@ -5,20 +5,6 @@ isUserAuthenticated();
 
 $userid =  $_COOKIE['userid'];
 
-
-// Connect to database
-$conn = database_connection();
-
-// Authenticate User: Pass email address and password
-try{
-    // Execute stored procedure
-    $result = mysqli_query($conn, "CALL sp_GetOpportunitiesByUserID(". $userid .")") or die("Query fail: " . mysqli_error());
-}
-catch (exception $e) {
-    echo $e;
-}
-// Close DB connection
-$conn->close();
 ?>
 
 <!DOCTYPE html>

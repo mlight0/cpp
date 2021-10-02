@@ -17,9 +17,12 @@ body {
     font-weight: 400;
     margin-bottom: 30px;
   }  
+  
+  
   .font-orange {
     color: #f4511e;
   }
+ 
   .jumbotron {
     background-color: #f4511e;
     color: #fff;

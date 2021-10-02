@@ -22,7 +22,6 @@
                     <a class="navbar-brand" href="index.php">CAREER PATH PLUS</a>
                 </div>
                 
-                
             </div>
         </nav>
         <div class="container" style="margin-top:50px">

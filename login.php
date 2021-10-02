@@ -8,7 +8,7 @@ include 'includes/header_simple.php';
             <div class="row ">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-              
+
                     <h2>Login</h2>
                     <p>
                       <div class="panel panel-default">
@@ -23,10 +23,16 @@ include 'includes/header_simple.php';
                                     <label for="pwd">Password:</label>
                                       <input type="password" class="form-control input-lg" name="password" placeholder="Enter password">
                                     </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Remember me for a week from now.</label>
+                                    </div>
                                     <button type="submit" class="btn btn-default  input-lg">Login</button>
+                                   
                                 </form>
                         </div>
+                        
                         </div>
+                        <div class="text-center"><i>Oops!</i> I need to <a href="">reset my password.</a></div>
                     </p>
 </div>
 <div class="col-sm-4"></div>
